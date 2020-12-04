@@ -1,0 +1,88 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <div class="text-center">
+        <h1>Hello,{{ user }}!</h1>
+        <h5>This is your profile</h5>
+        {% if profile.userprofileinfo.profile_pic %}
+        <img class="rounded-circle mb-3" src="{{ profile.userprofileinfo.profile_pic.url }}" alt="Generic placeholder image" width="140"
+             height="140">
+            {% else %}
+            <img class="rounded-circle mb-3" src="/static/generic_profile_pic.png" alt="image" width="140" height="140">
+
+
+        {% endif %}
+
+
+        <div class="w-50 m-auto">
+
+    <div class="box">
+        <form method="post" enctype="multipart/form-data" class="furniture-form" >
+            {{ form }}
+            {% csrf_token  %}
+
+            <button class="btn btn-primary mt-2" type="submit">Change profile picture</button>
+        </form>
+    </div>
+
+
+        </div>
+    </div>
+    <hr>
+    {% if True %}
+        <h2 class='text-center'>These are your travel photos</h2>
+               <h2 class='text-center'> <a href="{% url 'travel:create'  %}" class="btn btn-primary mt-2">Add new photograph</a></h2>
+
+
+
+
+    <div class="container-unset">
+
+<ul class="list-photos">
+  {% for photo in photos %}
+
+        <div class="row-photo-list">
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+
+                    <img src="{{  photo.image_url.url }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ photo.city|capfirst }}, {{ photo.country|capfirst }}</h5>
+                        <h5 class="card-title">{{photo.title|capfirst}}</h5>
+
+                        <p class="card-text">{{ photo.description|truncatewords:5|capfirst }}</p>
+
+
+
+                    <p class="mt-2">Likes: {{ photo.like_set.count }}</p>
+
+                        <a href="{% url 'travel:photo_details' pk=photo.pk %}" class="btn btn-primary">See details</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   {% endfor %}
+
+
+</ul>
+    </div>
+
+    {% else %}
+        <div class="text-center">
+            <h2>You have no photos</h2>
+            <a href="{% url 'travel:create' %}" class="btn btn-primary mt-2">Add new photograph</a></div>
+        </div>
+    {% endif %}
+
+    {% if photos %}
+        <div class="text-center">
+
+ <a href="{% url 'accounts:delete_all_my_photos' %}" class="btn btn-primary mt-2" id="button_delete_all_photos">Delete all my photos</a></div>
+       </div>
+{% endif %}
+{% endblock %}

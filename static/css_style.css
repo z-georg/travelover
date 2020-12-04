@@ -1,0 +1,26 @@
+#index_title {
+  text-align: center;
+}
+
+.list-photos
+{
+  display: inline-block;
+  width: 2000px;
+}
+
+.row-photo-list{
+  display: inline-flex;
+}
+
+
+#test{
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+
+body{
+  padding-bottom: 1000px;
+}
+
+

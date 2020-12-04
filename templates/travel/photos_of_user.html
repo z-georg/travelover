@@ -1,0 +1,61 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+    <hr>
+    {% if True %}
+        <h2 class='text-center'>These are {{ owner_of_photo_username }}'s travel photos</h2>
+
+
+
+
+    <div class="container-unset">
+
+<ul class="list-photos">
+  {% for photo in photos_of_user %}
+
+        <div class="row-photo-list">
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+
+                    <img src="{{  photo.image_url.url }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ photo.city|capfirst }}, {{ photo.country|capfirst }}</h5>
+                        <h5 class="card-title">{{photo.title|capfirst}}</h5>
+
+                        <p class="card-text">{{ photo.description|truncatewords:5|capfirst }}</p>
+
+
+
+                    <p class="mt-2">Likes: {{ photo.like_set.count }}</p>
+
+                        <a href="{% url 'travel:photo_details' pk=photo.pk %}" class="btn btn-primary">See details</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   {% endfor %}
+
+
+</ul>
+    </div>
+
+    {% else %}
+        <div class="text-center">
+            <h2>You have no photos</h2>
+            <a href="{% url 'travel:create' %}" class="btn btn-primary mt-2">Add new photograph</a></div>
+        </div>
+    {% endif %}
+
+    {% if photos %}
+        <div class="text-center">
+
+ <a href="{% url 'accounts:delete_all_my_photos' %}" class="btn btn-primary mt-2" id="button_delete_all_photos">Delete all my photos</a></div>
+       </div>
+{% endif %}
+{% endblock %}

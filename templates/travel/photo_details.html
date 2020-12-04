@@ -1,0 +1,112 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block content %}
+
+<div style="margin-bottom: 100px">
+
+    <div id="hello" class="container">
+
+        <div class="d-flex">
+            <div class="d-inline p-2 w-50">
+                <img src="{{ photos_list.image_url.url }}" class="w-50 rounded mx-auto d-block">
+                    <h5 class="w-50 rounded mx-auto d-block">{{photos_list.city|capfirst}}</h5>
+                    <h5 class="w-50 rounded mx-auto d-block">{{ photos_list.country|capfirst }}</h5>
+                <h5>
+                <a href="{% url 'travel:photos_of_user' pk=photos_list.pk %}" id="button_comment" class="w-50 rounded mx-auto d-block" >see other photos taken by {{ photos_list.user }}</a>
+                </h5>
+
+
+
+
+            </div>
+
+
+            <div class="d-inline p-2 w-50">
+                <div class="d-flex justify-content-between">
+                    <h5>"{{photos_list.title|capfirst }}"</h5>
+
+                </div>
+                 <div class="d-flex justify-content-between">
+                    <h5> {{photos_list.description|capfirst }}</h5>
+
+                </div>
+                                    {%  if photos_list.see_edit_and_delete_button == True %}
+
+                <a href="{% url 'travel:edit_photo' pk=photos_list.pk %}" class="btn btn-success">Edit</a>
+                <a href="{% url 'travel:delete_photo' pk=photos_list.pk %}" class="btn btn-danger">Delete</a>
+
+                        {%  endif %}
+
+                <P></P>
+  {%  if user.is_authenticated %}
+                                        {% if already_liked == True  %}
+				<a href="{% url 'travel:like' pk=photos_list.pk %}"><i class="fa fa-heart" aria-hidden="true"></i></a>
+          {% else %}
+          <a href="{% url 'travel:like' pk=photos_list.pk %}"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+            {% endif %}
+{% endif %}
+                    <p class="mt-2">Likes: {{ photos_list.like_set.count }}</p>
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+<div class="d-block" style="background-color: #d1e3e3; padding:2%">
+    {% if photos_list.comment_set.count > 0 %}
+       {% for comment in photos_list.comment_set.all %}
+    <div class="box">
+
+        <h5><em>{{ comment.user }} : {{ comment }}</em></h5>
+
+
+        {% if comment.user.user_id == request.user.id %}
+                <a href="{% url 'travel:edit_comment' pk=comment.pk %}" id="button_comment" class="btn btn-primary btn-sm" >Edit</a>
+                <a href="{% url 'travel:delete_comment' pk=comment.pk %}"  id="button_comment" class="btn btn-primary btn-sm">Delete</a>
+
+        {% endif %}
+        <hr>
+    </div>
+        {% endfor %}
+        {% else %}
+    <div class="box">
+        <h3>There are no comments for this photo! </h3>
+    </div>
+
+
+   {% endif %}
+  {%  if user.is_authenticated %}
+
+    <div class="box">
+        <form method="post" enctype="multipart/form-data" class="furniture-form" >
+
+
+                  {% csrf_token  %}
+               {{ form }}
+
+        <P></P>
+            <button class="btn btn-primary mt-2" type="submit">Add comment</button>
+        </form>
+    </div>
+{% endif %}
+</div>
+
+    </div>
+</div>
+
+    <style>
+
+        #button_comment{
+
+    width:4em;  height: 1.7em;
+            font-size: 10px;
+}
+
+
+    </style>
+
+{% endblock %}

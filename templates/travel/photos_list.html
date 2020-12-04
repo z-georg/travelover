@@ -1,0 +1,58 @@
+{% extends 'common/base.html' %}
+
+{% block content %}
+
+<div style="margin-bottom: 100px">
+
+  {%  if user.is_authenticated %}
+
+    <div id="test" class="container">
+<h5>You can add your most beautiful pictures from all around the world and share it with others</h5>
+<a href="{% url 'travel:create'  %}" class="btn btn-primary mt-2">Add new photograph</a> </div>
+
+    </div>
+      {% else %}
+      <h5  class='text-center'>Please sign in to contribute to the collection and add your most beautiful pictures from all around the world</h5>
+
+
+   {% endif %}
+
+
+    <div class="container-unset">
+
+        <h1  class='text-center'>All photos</h1>
+<ul class="list-photos">
+  {% for photo in photos %}
+
+        <div class="row-photo-list">
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+
+                    <img src="{{  photo.image_url.url }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ photo.city|capfirst }}, {{ photo.country|capfirst }}</h5>
+                        <h5 class="card-title">{{photo.title|capfirst}}</h5>
+
+                        <p class="card-text">{{ photo.description|truncatewords:5|capfirst }}</p>
+
+
+
+                    <p class="mt-2">Likes: {{ photo.like_set.count }}</p>
+
+                        <a href="{% url 'travel:photo_details' pk=photo.pk %}" class="btn btn-primary">See details</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   {% endfor %}
+</ul>
+    </div>
+
+    <p></p>
+
+
+
+{% endblock %}
