@@ -2,136 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41076f66-8d4f-42c4-8104-4fa874dbc022" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/travelover.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/migrations/0002_auto_20201127_0952.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/migrations/0003_auto_20201127_0953.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/core_functions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/Alfonso_M._2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/Ap1-17-1170x532_LGjEx5B.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/Drahan_P1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/Ezra_M.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/Ezra_M_WUuUgtY.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/Jan_S..jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/Lukas_D._2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/OIP.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/OIP_UHJANso.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/collage.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/paris-summer_FbAuolu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/sunrise-over-tower-bridge-london-england.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/sunrise-over-tower-bridge-london-england_5SWzgck.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/sunrise-over-tower-bridge-london-england_7DUAIes.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/sunrise-over-tower-bridge-london-england_d4f6p7V.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Adrian_L7.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Ales_H.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Ales_H_btSnf0l.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Ales_Z.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Ales_Z_Ao17n19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Alfonso_M._2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Ap1-17-1170x532.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Brian_B..jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/DSC_0477.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/DSC_0498.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/David_F..jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Drahan_P1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Drahan_P1_0BYnp3A.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Drahan_P1_lCLCLZq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Ezra_M.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Ezra_M_9Ebp1X6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Hans_W_left.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Hans_W_left_roeJqox.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Ivan_C..jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Jakub_D.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Jan_Ho..jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Jan_P.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Jan_S2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Jaroslav_K.1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Jaroslav_T..jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Jaroslav_T._T4XMwCK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Jess_I.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Jozef_A2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Juraj_C.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Lukas_H._2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/cat-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/cat-02_4FSL8xi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/cat-02_8mx3cGs.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/cat-02_Bqbw4yC.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/cat-02_FpfuT0V.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/cat-02_U5fQRqy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/cat-02_YIMF3SF.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/cat-02_ZSqvhn9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/cat-02_blC4qiz.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/cat-02_jMIf3cC.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/cat-02_jTkDJAz.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/cat-02_lBpuxFW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/jack-russell-photo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/jack-russell-photo_Bn34u5X.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/jack-russell-photo_PI1Gft1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/jack-russell-photo_eqBjmKz.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/velislav.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/generic_profile_pic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/accounts/delete_all_my_photos.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/accounts/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/accounts/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/accounts/my_profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/accounts/registration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/common/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/common/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/common/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/common/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/travel/create_photo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/travel/delete_comment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/travel/delete_photo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/travel/edit_comment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/travel/edit_photo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/travel/photo_details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/travel/photos_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/travel/photos_of_user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/migrations/0002_auto_20201113_0929.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/migrations/0003_auto_20201113_0938.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/migrations/0004_auto_20201113_0940.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/migrations/0005_auto_20201113_0944.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/migrations/0006_auto_20201119_1416.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/migrations/0007_auto_20201119_1417.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travelover/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travelover/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travelover/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travelover/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travelover/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,34 +105,44 @@
       <workItem from="1606156870696" duration="11159000" />
       <workItem from="1606230254834" duration="9004000" />
       <workItem from="1606400876389" duration="19388000" />
-      <workItem from="1607092489496" duration="74000" />
+      <workItem from="1607092489496" duration="3439000" />
+      <workItem from="1607097677446" duration="114000" />
+      <workItem from="1607097808726" duration="103000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="views changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="views changes" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1607097623861">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1607097623861" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1607010658619">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607010658619" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1607092059512">
+    <state width="1877" height="257" key="GridCell.Tab.0.bottom" timestamp="1607097657032">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607092059512" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1607092059511">
+    <state width="1877" height="257" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607097657032" />
+    <state width="1877" height="257" key="GridCell.Tab.0.center" timestamp="1607097657032">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607092059511" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1607092059511">
+    <state width="1877" height="257" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607097657032" />
+    <state width="1877" height="257" key="GridCell.Tab.0.left" timestamp="1607097657032">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607092059511" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1607092059511">
+    <state width="1877" height="257" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607097657032" />
+    <state width="1877" height="257" key="GridCell.Tab.0.right" timestamp="1607097657032">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607092059511" />
+    <state width="1877" height="257" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607097657032" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1607092059512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -277,10 +159,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607092059512" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1607092494844">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1607097927747">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607092494844" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607097927747" />
     <state x="521" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1606380436616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -66,18 +66,11 @@ def user_login(request):
         login_form = LoginForm(request.POST)
         if login_form.is_valid():
 
-            #user = login_form.save()
 
             username = login_form.cleaned_data['username']
             password = login_form.cleaned_data['password']
 
-            #  Use set_password here
-           # user.set_password(password)
-            #user.save()
             user = authenticate(username=username, password=password)
-            print(password)
-
-            print(user)
 
             if user:
                 if user.is_active:
@@ -130,9 +123,6 @@ def my_profile(request, pk):
 
             user_info = form.save(commit=False)
             user_info.save()
-
-
-
 
 
             user_dict = {'profile': current_user,
