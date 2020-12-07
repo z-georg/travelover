@@ -20,15 +20,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'travel:all_photos' %}">
 
-                                 {% if profile.userprofileinfo.profile_pic %}
-                            <img src={{ profile.userprofileinfo.profile_pic.url }} width="30" height="30" alt="">
+                            {% if profile.userprofileinfo.profile_pic %}
+                                <img src={{ profile.userprofileinfo.profile_pic.url }} width="30" height="30" alt="">
 
-            {% else %}
-                            <img src="/static/generic_profile_pic.png" width="30" height="30" alt="">
+                            {% else %}
+                                <img src="/static/generic_profile_pic.png" width="30" height="30" alt="">
 
 
-        {% endif %}
-
+                            {% endif %}
 
 
                         </a>
