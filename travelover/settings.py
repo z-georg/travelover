@@ -20,7 +20,6 @@ import users
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -31,7 +30,6 @@ SECRET_KEY = 'drk7yvq6sldd(%^!dq^vms)vi65#ed&bfws*#p@_4^01kl+(2t'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -47,7 +45,6 @@ INSTALLED_APPS = [
     'accounts',
 
 ]
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -80,7 +77,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'travelover.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -95,8 +91,6 @@ DATABASES = {
 
 conn = psycopg2.connect(user="postgres", password="k4bd9x", database="postgres", host="localhost", port="5432")
 print("Successfully connected!")
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -116,7 +110,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -130,7 +123,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
@@ -143,7 +135,7 @@ STATICFILES_DIRS = (
     join(BASE_DIR, "static"),
 )
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 LOGIN_URL = '/accounts/user_login'

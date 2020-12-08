@@ -5,20 +5,17 @@ from accounts.models import UserProfileInfo
 
 
 class UserForm(forms.ModelForm):
-
     class Meta:
         model = User
         fields = ('username', 'password')
+
 
 class UserProfileInfoFrom(forms.ModelForm):
     class Meta:
         model = UserProfileInfo
         exclude = ('user',)
-     #   fields = ['profile_pic']
 
 
 class LoginForm(forms.Form):
     username = forms.CharField()
-    password = forms.CharField(widget=forms.PasswordInput(),)
-
-
+    password = forms.CharField(widget=forms.PasswordInput(), )

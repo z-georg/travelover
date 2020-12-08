@@ -43,7 +43,6 @@ class DeletePhotoForm(CreatePhotoForm):
             field.widget.attrs['readonly'] = True
 
 
-
 class CommentPhotoForm(forms.ModelForm):
     comment = forms.CharField(required=True, widget=forms.Textarea(attrs={
         'class': 'form-control rounded-2'
@@ -51,7 +50,7 @@ class CommentPhotoForm(forms.ModelForm):
 
     class Meta:
         model = Comment
-        fields = ['comment',]
+        fields = ['comment', ]
 
 
 class DeleteComment(forms.ModelForm):
@@ -63,6 +62,7 @@ class DeleteComment(forms.ModelForm):
         model = Comment
         fields = '__all__'
 
+
 class EditComment(forms.ModelForm):
     comment = forms.CharField(required=True, widget=forms.Textarea(attrs={
         'class': 'form-control rounded-2'
@@ -70,5 +70,4 @@ class EditComment(forms.ModelForm):
 
     class Meta:
         model = Comment
-        fields = ['comment',]
-
+        fields = ['comment', ]

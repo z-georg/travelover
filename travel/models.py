@@ -1,5 +1,3 @@
-from django.conf import settings
-from django.contrib.auth import get_user_model
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -10,8 +8,7 @@ from accounts.models import UserProfileInfo
 
 
 class Photo(models.Model):
-
-    user = models.ForeignKey(UserProfileInfo,default=1, on_delete=models.CASCADE)
+    user = models.ForeignKey(UserProfileInfo, default=1, on_delete=models.CASCADE)
     city = models.CharField(max_length=25)
     country = models.CharField(max_length=25)
     title = models.CharField(max_length=25)
@@ -24,17 +21,16 @@ class Photo(models.Model):
 
 
 class Like(models.Model):
-
     photo = models.ForeignKey(to=Photo, default='', on_delete=models.CASCADE)
-    user = models.ForeignKey(to=UserProfileInfo,default=1, on_delete=models.CASCADE)
+    user = models.ForeignKey(to=UserProfileInfo, default=1, on_delete=models.CASCADE)
     likes_count = ''
 
     def __str__(self):
         return f"{self.photo}"
 
-class Comment(models.Model):
 
-    photo = models.ForeignKey(to=Photo,default='', on_delete=models.CASCADE)
+class Comment(models.Model):
+    photo = models.ForeignKey(to=Photo, default='', on_delete=models.CASCADE)
     user = models.ForeignKey(to=UserProfileInfo, default=1, on_delete=models.CASCADE)
     comment = models.TextField(max_length=256)
 
