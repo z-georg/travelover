@@ -3,15 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="41076f66-8d4f-42c4-8104-4fa874dbc022" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/travel/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travelover/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/travelover/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +39,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../foodstagram" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/tests.py" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -62,7 +57,71 @@
       <recent name="C:\Users\velis\PycharmProjects\travelover\travel" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django server.travelover">
+    <configuration name="Test: " type="DjangoTestsConfigurationType" temporary="true">
+      <module name="travelover" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="travelover" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/travel" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/travel/tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="travelover" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="travelover" type="Python.DjangoServer" factoryName="Django server">
       <module name="travelover" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -87,6 +146,13 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Django tests.Test: " />
+        <item itemvalue="Python.views" />
+        <item itemvalue="Python.tests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -116,7 +182,7 @@
       <workItem from="1607092489496" duration="3439000" />
       <workItem from="1607097677446" duration="114000" />
       <workItem from="1607097808726" duration="103000" />
-      <workItem from="1607097927971" duration="3969000" />
+      <workItem from="1607097927971" duration="8388000" />
     </task>
     <servers />
   </component>
@@ -132,26 +198,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1607097623861" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1607010658619">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1607431357914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607010658619" />
-    <state width="1877" height="257" key="GridCell.Tab.0.bottom" timestamp="1607430809868">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607431357914" />
+    <state width="1860" height="257" key="GridCell.Tab.0.bottom" timestamp="1607435204700">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="257" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607430809868" />
-    <state width="1877" height="257" key="GridCell.Tab.0.center" timestamp="1607430809868">
+    <state width="1860" height="257" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607435204700" />
+    <state width="1860" height="257" key="GridCell.Tab.0.center" timestamp="1607435204699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="257" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607430809868" />
-    <state width="1877" height="257" key="GridCell.Tab.0.left" timestamp="1607430809868">
+    <state width="1860" height="257" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607435204699" />
+    <state width="1860" height="257" key="GridCell.Tab.0.left" timestamp="1607435204699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="257" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607430809868" />
-    <state width="1877" height="257" key="GridCell.Tab.0.right" timestamp="1607430809868">
+    <state width="1860" height="257" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607435204699" />
+    <state width="1860" height="257" key="GridCell.Tab.0.right" timestamp="1607435204700">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="257" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607430809868" />
+    <state width="1860" height="257" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607435204700" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1607092059512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -172,6 +238,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607097927747" />
+    <state x="876" y="581" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607435061039">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="876" y="581" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607435061039" />
     <state x="521" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1606380436616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -180,5 +250,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="609" y="361" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606124394078" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/travelover$tests.coverage" NAME="tests Coverage Results" MODIFIED="1607433992664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/travel" />
+    <SUITE FILE_PATH="coverage/travelover$views.coverage" NAME="views Coverage Results" MODIFIED="1607434428193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/travelover$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1607434441035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
