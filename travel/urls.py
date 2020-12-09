@@ -7,7 +7,7 @@ from django.conf import settings
 app_name = 'travel'
 urlpatterns = [
     url(r'^create/$', views.create_photo, name = 'create'),
-    url(r'^photos/$', views.all_photos, name = 'all_photos'),
+    url(r'^photos/$', views.all_photosListView.as_view(), name = 'all_photos'),
     path('photos/details/<int:pk>/',views.photo_details, name='photo_details'),
     path('edit/<int:pk>/', views.edit_photo, name = 'edit_photo'),
     path('delete/<int:pk>/', views.delete_photo, name = 'delete_photo'),

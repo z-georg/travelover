@@ -1,24 +1,40 @@
 from django.forms import forms
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
+from django.views.generic import ListView
 
 from accounts.models import UserProfileInfo
-from . import forms
+from . import forms, models
 
 # Create your views here.
 from .forms import CommentPhotoForm, CreatePhotoForm, DeletePhotoForm, DeleteComment, EditComment
 from .models import Photo, Comment, Like
 
 
-def all_photos(request):
-    current_user = request.user
+#def all_photos(request):
+#    current_user = request.user
 
-    photos_list = Photo.objects.order_by('title')
+#    photos_list = Photo.objects.order_by('title')
 
-    photos_dict = {'photos': photos_list,
-                   'profile': current_user,
-                   }
-    return render(request, 'travel/photos_list.html', context=photos_dict)
+#    photos_dict = {'photos': photos_list,
+#                  'profile': current_user,
+#                   }
+#    return render(request, 'travel/photos_list.html', context=photos_dict)
+
+
+
+class all_photosListView(ListView):
+
+    model = models.Photo
+    template_name = 'travel/photos_list.html'
+
+    def get_context_data(self, **kwargs):
+        photos_list = Photo.objects.order_by('title')
+
+        context = super().get_context_data(**kwargs)
+        context['profile'] = self.request.user
+        context['photos'] = photos_list
+        return context
 
 
 def photo_details(request, pk):
