@@ -1,7 +1,8 @@
 from django.forms import forms
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-from django.views.generic import ListView
+from django.urls import reverse_lazy
+from django.views.generic import ListView, CreateView
 
 from accounts.models import UserProfileInfo
 from . import forms, models
@@ -81,30 +82,55 @@ def photo_details(request, pk):
         return render(request, 'travel/photo_details.html', context=context)
 
 
-def create_photo(request):
-    current_user = request.user
+#def create_photo(request):
+#    current_user = request.user
+#
+#    if request.method == "GET":
+#        form = forms.CreatePhotoForm(request.GET)
+#        context = {'profile': current_user, }
+#        context.update({'form': form})
+#
+#        return render(request, 'travel/create_photo.html', context=context)
+#    elif request.method == "POST":
+#        form = forms.CreatePhotoForm(request.POST, request.FILES)
+#
+#        if form.is_valid():
+#           print("VALIDATION SUCCESS")
+#          photos_list = Photo.objects.order_by('title')
+#         photos_dict = {'photos': photos_list,
+#                           'profile': current_user, }
+#
+#            new_photo = form.save()
+#            new_photo.user = UserProfileInfo.objects.get(user=request.user)
+#            new_photo.user.id = UserProfileInfo.objects.get(user=request.user.id)
+#            new_photo.save()
+#           return render(request, 'travel/photos_list.html', context=photos_dict)
 
-    if request.method == "GET":
-        form = forms.CreatePhotoForm(request.GET)
-        context = {'profile': current_user, }
-        context.update({'form': form})
 
-        return render(request, 'travel/create_photo.html', context=context)
-    elif request.method == "POST":
-        form = forms.CreatePhotoForm(request.POST, request.FILES)
 
-        if form.is_valid():
-            print("VALIDATION SUCCESS")
-            photos_list = Photo.objects.order_by('title')
-            photos_dict = {'photos': photos_list,
-                           'profile': current_user, }
+class CreatePhotoView(CreateView):
+    template_name = 'travel/create_photo.html'
+    model = Photo
+    form_class = CreatePhotoForm
 
-            new_photo = form.save()
-            new_photo.user = UserProfileInfo.objects.get(user=request.user)
-            new_photo.user.id = UserProfileInfo.objects.get(user=request.user.id)
-            new_photo.save()
-            return render(request, 'travel/photos_list.html', context=photos_dict)
+    def get_success_url(self):
+        url = 'http://127.0.0.1:8000/photos/'
+        return url
 
+    def form_valid(self, form):
+        new_photo = form.save(commit=False)
+        new_photo.user = UserProfileInfo.objects.get(user=self.request.user)
+        new_photo.user.id = UserProfileInfo.objects.get(user=self.request.user.id)
+        new_photo.save()
+        return super().form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        photos_list = Photo.objects.order_by('title')
+
+        context = super().get_context_data(**kwargs)
+        context['profile'] = self.request.user
+        context['photos'] = photos_list
+        return context
 
 def edit_photo(request, pk):
     photos_list = get_object_or_404(Photo, pk=pk)

@@ -3,10 +3,11 @@ from . import views
 from django.conf.urls import url
 from django.conf.urls.static import static
 from django.conf import settings
+from travel.views import CreatePhotoView
 
 app_name = 'travel'
 urlpatterns = [
-    url(r'^create/$', views.create_photo, name = 'create'),
+    url(r'^create/$', CreatePhotoView.as_view(), name = 'create'),
     url(r'^photos/$', views.all_photosListView.as_view(), name = 'all_photos'),
     path('photos/details/<int:pk>/',views.photo_details, name='photo_details'),
     path('edit/<int:pk>/', views.edit_photo, name = 'edit_photo'),

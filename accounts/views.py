@@ -1,11 +1,13 @@
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout, views
 from django.contrib.auth.models import User
 from django.db import transaction
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse, request
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 
 from django.contrib.auth import views as auth_views
+from django.urls import reverse_lazy
+from django.views import generic as views
 
 from travel.models import Photo
 # Create your views here.
