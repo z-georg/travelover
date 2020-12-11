@@ -5,6 +5,8 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 
+from django.contrib.auth import views as auth_views
+
 from travel.models import Photo
 # Create your views here.
 from accounts.forms import UserForm, UserProfileInfoFrom, LoginForm
@@ -71,11 +73,14 @@ def user_login(request):
                 return HttpResponse("invalid login details!")
 
 
-@login_required
-def user_logout(request):
-    logout(request)
-    return redirect('http://127.0.0.1:8000')
+#@login_required
+#def user_logout(request):
+#    logout(request)
+#    return redirect('http://127.0.0.1:8000')
 
+
+class LogoutView(auth_views.LogoutView):
+    next_page = 'http://127.0.0.1:8000'
 
 def my_profile(request, pk):
     current_user = get_object_or_404(User, pk=pk)
