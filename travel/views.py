@@ -1,8 +1,9 @@
 from django.forms import forms
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView
+from django.contrib.auth import mixins as auth_mixins
+from django.urls import reverse_lazy, reverse
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 
 from accounts.models import UserProfileInfo
 from . import forms, models
@@ -107,8 +108,7 @@ def photo_details(request, pk):
 #           return render(request, 'travel/photos_list.html', context=photos_dict)
 
 
-
-class CreatePhotoView(CreateView):
+class CreatePhotoView(auth_mixins.LoginRequiredMixin, CreateView):
     template_name = 'travel/create_photo.html'
     model = Photo
     form_class = CreatePhotoForm
@@ -132,50 +132,91 @@ class CreatePhotoView(CreateView):
         context['photos'] = photos_list
         return context
 
-def edit_photo(request, pk):
-    photos_list = get_object_or_404(Photo, pk=pk)
-    current_user = request.user
-
-    if request.method == "GET":
-        form = CreatePhotoForm(instance=photos_list)
-        context = {'profile': current_user, }
-        context.update({'form': form})
-
-        return render(request, 'travel/edit_photo.html', context=context)
-
-
-    elif request.method == "POST":
-
-        form = CreatePhotoForm(request.POST, request.FILES, instance=photos_list)
-        if form.is_valid():
-            photos_list = form.save(commit=False)
-            photos_list.save()
-
-        return redirect(f'http://127.0.0.1:8000/photos/details/{pk}')
-
-    context = {'photos_list': photos_list,
-               'form': CommentPhotoForm()}
-    return render(request, 'travel/photo_details.html', context=context)
-
-
-def delete_photo(request, pk):
-    current_user = request.user
-
-    photos_list = get_object_or_404(Photo, pk=pk)
-
-    if request.method == "GET":
-        form = DeletePhotoForm(instance=photos_list)
-        context = {'profile': current_user, }
-        context.update({'form': form})
-
-        return render(request, 'travel/delete_photo.html', context=context)
+# def edit_photo(request, pk):
+#     photos_list = get_object_or_404(Photo, pk=pk)
+#     current_user = request.user
+#
+#     if request.method == "GET":
+#         form = CreatePhotoForm(instance=photos_list)
+#         context = {'profile': current_user, }
+#         context.update({'form': form})
+#
+#         return render(request, 'travel/edit_photo.html', context=context)
+#
+#
+#     elif request.method == "POST":
+#
+#         form = CreatePhotoForm(request.POST, request.FILES, instance=photos_list)
+#         if form.is_valid():
+#             photos_list = form.save(commit=False)
+#             photos_list.save()
+#
+#         return redirect(f'http://127.0.0.1:8000/photos/details/{pk}')
+#
+#     context = {'photos_list': photos_list,
+#                'form': CommentPhotoForm()}
+#     return render(request, 'travel/photo_details.html', context=context)
 
 
-    elif request.method == "POST":
+class UpdatePhotoView(auth_mixins.LoginRequiredMixin, UpdateView):
+    template_name = 'travel/edit_photo.html'
+    model = Photo
+    form_class = CreatePhotoForm
 
-        photos_list.delete()
-        return redirect('http://127.0.0.1:8000/photos')
+    def get_success_url(self):
+        pk = self.object.id
+        url = f'http://127.0.0.1:8000/photos/details/{pk}'
 
+        return url
+
+
+    def form_valid(self, form):
+        new_photo = form.save(commit=False)
+        new_photo.user = UserProfileInfo.objects.get(user=self.request.user)
+        new_photo.user.id = UserProfileInfo.objects.get(user=self.request.user.id)
+        new_photo.save()
+        return super().form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        photos_list = Photo.objects.order_by('title')
+
+        context = super().get_context_data(**kwargs)
+        context['profile'] = self.request.user
+        context['photos'] = photos_list
+        return context
+
+
+# def delete_photo(request, pk):
+#     current_user = request.user
+#
+#     photos_list = get_object_or_404(Photo, pk=pk)
+#
+#     if request.method == "GET":
+#         form = DeletePhotoForm(instance=photos_list)
+#         context = {'profile': current_user, }
+#         context.update({'form': form})
+#
+#         return render(request, 'travel/delete_photo.html', context=context)
+#
+#
+#     elif request.method == "POST":
+#
+#         photos_list.delete()
+#         return redirect('http://127.0.0.1:8000/photos')
+
+
+class DeletePhotoView(auth_mixins.LoginRequiredMixin, DeleteView):
+    model = Photo
+    template_name = 'travel/delete_photo.html'
+    success_url = 'http://127.0.0.1:8000/photos'
+
+    def get_context_data(self, **kwargs):
+        photos_list = Photo.objects.order_by('title')
+
+        context = super().get_context_data(**kwargs)
+        context['profile'] = self.request.user
+        context['photos'] = photos_list
+        return context
 
 def like(request, pk):
     photo = Photo.objects.get(pk=pk)
